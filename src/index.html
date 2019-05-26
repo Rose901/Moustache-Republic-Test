@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="site.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mini-cart">
+        <div class="mini-cart-grey-part">
+            <div class="dropdown-button" id="open">
+                <div class="dropdown-click" onclick="topToggle()">
+                    <div id="click1" class="click-1"><span><i class="fas fa-shopping-cart"></i></span>
+                        <span class="items-parentheses mini-cart-grey-part-item font-color-light-grey">( 0 )</span>
+                    </div>
+                </div>
+
+                <div class="dropdown-click" onclick="topToggle()">
+                    <div id="click2" class="click-2">My Cart <span
+                            class="items-parentheses mini-cart-grey-part-item font-color-light-grey">( 0 )</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dropdown-items" id="dropdownContent">
+            <div class="dropdown-content">
+                <img class="classic-tee-small" src="./classic-tee.jpg" alt="Classic-Tee-small">
+                <div class="dropdown-item-details">
+                    <div class="item-name">Classic Tee</div>
+                    <div class="item-amounts">1x$75.00</div>
+                    <div class="item-size">Size:S</div>
+                </div>
+
+            </div>
+            <div class="dropdown-content">
+                <img class="classic-tee-small" src="./classic-tee.jpg" alt="Classic-Tee-small">
+                <div>
+                    <div class="item-name">Classic Tee</div>
+                    <div class="item-amounts">3x$75.00</div>
+                    <div class="item-size">Size:L</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="items-page">
+
+        <div class="classic-tee-img">
+            <img src="./classic-tee.jpg" alt="Classic-Tee">
+        </div>
+        <div>
+            <h2 class="font-color-dark-grey">Classic Tee</h2>
+            <div class="price-and-description">
+                <h4>$75.00</h4>
+                <p class="text-part font-color-light-grey">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, sunt placeat!
+                    Aliquam recusandae quasi error nulla dicta quibusdam!
+                    Dolore exercitationem eos asperiores pariatur a voluptate aspernatur cum magnam sint,
+                    quasi esse officiis voluptas totam sunt nam
+                </p>
+            </div>
+
+            <div>
+                <div class="size-title">SIZE
+                    <span class="required-star">*</span>
+                    <span id="top-size-text"></span>
+                </div>
+
+                <div class="size-buttons" id="size-buttons">
+                    <span><button class="size-button font-color-light-grey">S</button></span>
+                    <span><button class="size-button font-color-light-grey">M</button></span>
+                    <span><button class="size-button font-color-light-grey">L</button></span>
+                </div>
+
+            </div>
+            <div class="add-to-cart-button" id="addToChatButton">
+                <button class="add-to-cart-button-text font-color-dark-grey">ADD TO CART</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

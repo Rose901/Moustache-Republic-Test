@@ -1,0 +1,268 @@
+@import "./Variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Open Sans';
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.mini-cart {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin: auto;
+
+    .mini-cart-grey-part {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        background-color: #F6F6F7;
+        color: $font-color-light;
+
+        .dropdown-button {
+            position: relative;
+            padding: 15px;
+            z-index: 2;
+
+            &.open {
+                border: 1px solid $border-light-grey;
+                border-bottom: 1px solid $white;
+                background-color: $white;
+            }
+
+            .click-1 {
+                padding-right: 20px;
+            }
+
+            .click-2 {
+                display: none;
+            }
+        }
+    }
+
+    .dropdown-items {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        padding: 20px;
+        margin-top: -1px;
+        background-color: $white;
+        border: 1px solid $border-light-grey;
+        display: none;
+
+        .dropdown-content {
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            width: 300px;
+            line-height: 17px;
+
+            .classic-tee-small {
+                width: 50px;
+                height: 80px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.items-page {
+    width: 100%;
+    margin: auto;
+    font-family: "Open Sans";
+    display: flex;
+    flex-direction: column;
+
+    .font-color-dark-grey {
+        color: $border-dark-grey;
+    }
+
+    .font-color-light-grey {
+        color: #888888;
+    }
+
+    .classic-tee-img {
+        margin: 0 auto;
+        padding: 0 15px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: bold;
+        margin: 30px 15px;
+    }
+
+    .price-and-description {
+        margin: auto;
+        width: 100%;
+
+        h4 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin: 0 20px;
+            padding: 8px 0;
+            display: block;
+            width: 100%;
+        }
+
+        .text-part {
+            line-height: 28px;
+            text-align: justify;
+            margin: 30px 20px;
+            padding: 0 10px;
+        }
+    }
+
+    .size-title {
+        font-size: 18px;
+        font-weight: 400;
+        color: $font-color-light;
+        margin: 20px  35px;
+
+        .required-star {
+            color: #c90000;
+        }
+
+        #top-size-text {
+            color: $border-dark-grey;
+        }
+    }
+
+    .size-buttons {
+        margin: 0 35px;
+
+        .size-button {
+            width: 60px;
+            height: 50px;
+            background-color: $white;
+            border: 1px solid $border-light-grey;
+            font-size: 14px;
+            margin-right: 2px;
+            text-align: center;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &::selection {
+                border-color: $border-dark-grey;
+            }
+        }
+    }
+
+    .add-to-cart-button {
+        margin: 30px 35px;
+
+        .add-to-cart-button-text {
+            width: 220px;
+            height: 50px;
+            background-color: $white;
+            border: 3px solid $border-dark-grey;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 3px;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &:hover {
+                background: $border-dark-grey;
+                color: $white;
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+// tablet responsive
+@media #{$tablet} {
+    .click-2 {
+        display: none;
+    }
+}
+
+// desktop responsive
+@media #{$desktop} {
+    body {
+        font-size: 75%;
+    }
+
+    .mini-cart {
+        .mini-cart-grey-part {
+            .dropdown-button {
+                margin-right: 200px;
+
+                .click-1 {
+                    display: none;
+                }
+
+                .click-2 {
+                    display: block;
+                }
+            }
+        }
+
+        .dropdown-items {
+            right: 200px;
+        }
+    }
+
+    .items-page {
+        margin: 0 auto;
+        flex-direction: row;
+        width: 70%;
+
+        & > div {
+            flex-basis: 50%;
+        }
+
+        & > div:first-child {
+            flex-basis: 40%;
+        }
+
+        .size-buttons {
+            .size-button {
+                width: 45px;
+                height: 40px;
+            }
+        }
+
+        .size-title {
+            font-size: 13px;
+        }
+
+        .add-to-cart-button {
+            .add-to-cart-button-text {
+                width: 160px;
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+
+        .price-and-description {
+            .text-part {
+                line-height: 20px;
+            }
+
+            h4 {
+                border-top: 1px solid $border-extra-light-grey;
+                border-bottom: 1px solid $border-extra-light-grey;
+            }
+        }
+    }
+}
