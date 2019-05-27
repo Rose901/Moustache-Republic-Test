@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="site.js"></script>
-    <title>Document</title>
+    <title>Classic Tee - Moustache Republic Test</title>
 </head>
 
 <body>
@@ -23,10 +23,9 @@
                 </div>
 
                 <div class="dropdown-click" onclick="topToggle()">
-                    <div id="click2" class="click-2">My Cart <span
-                            class="items-parentheses mini-cart-grey-part-item font-color-light-grey">( 0 )</span>
+                    <div id="click2" class="click-2">My Cart
+                        <span class="items-parentheses mini-cart-grey-part-item font-color-light-grey">( 0 )</span>
                     </div>
-
                 </div>
 
             </div>
@@ -43,7 +42,7 @@
             </div>
             <div class="dropdown-content">
                 <img class="classic-tee-small" src="./classic-tee.jpg" alt="Classic-Tee-small">
-                <div>
+                <div class="dropdown-item-details">
                     <div class="item-name">Classic Tee</div>
                     <div class="item-amounts">3x$75.00</div>
                     <div class="item-size">Size:L</div>
@@ -77,9 +76,14 @@
                 </div>
 
                 <div class="size-buttons" id="size-buttons">
-                    <span><button class="size-button font-color-light-grey">S</button></span>
-                    <span><button class="size-button font-color-light-grey">M</button></span>
-                    <span><button class="size-button font-color-light-grey">L</button></span>
+                    <input type="radio" id="option-one" name="selector" class="size-button font-color-light-grey">
+                    <label for="option-one">S</label>
+
+                    <input type="radio" id="option-two" name="selector" class="size-button font-color-light-grey">
+                    <label for="option-two">M</label>
+
+                    <input type="radio" id="option-three" name="selector" class="size-button font-color-light-grey">
+                    <label for="option-three">L</label>
                 </div>
 
             </div>

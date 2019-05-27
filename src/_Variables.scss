@@ -1,5 +1,3 @@
-$largephone: "only screen and (min-width: 576px)";
-$tablet: "only screen and (min-width: 768px)";
 $desktop: "only screen and (min-width: 992px)";
 
 $border-extra-light-grey: #F2F2F2;
@@ -7,3 +5,12 @@ $border-light-grey: #CCCCCC;
 $border-dark-grey: #222222;
 $white: #FFFFFF;
 $font-color-light: #888888;
+$required-color: #c90000;
+
+$button-border-width-active: 3px;
+$button-border-width: 2px;
+
+$button-border-width-active-desktop: 2px;
+$button-border-width-desktop: 1px;
+
+$heading-underline: 1px solid $border-extra-light-grey;

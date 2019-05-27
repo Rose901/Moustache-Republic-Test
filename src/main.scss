@@ -52,23 +52,33 @@ html, body {
         position: absolute;
         right: 0;
         z-index: 1;
-        padding: 20px;
+        padding: 10px;
         margin-top: -1px;
         background-color: $white;
         border: 1px solid $border-light-grey;
         display: none;
+        width: 300px;
+        height: auto;
 
         .dropdown-content {
             display: flex;
             flex-direction: row;
             font-size: 12px;
-            width: 300px;
+            width: 250px;
             line-height: 17px;
+            padding: 5px;
+            margin: 0 10px;
+            margin-bottom: 25px;
 
             .classic-tee-small {
-                width: 50px;
-                height: 80px;
+                width: 60px;
+                height: 90px;
                 z-index: 1;
+                margin-right: 20px;
+            }
+
+            .dropdown-item-details {
+                line-height: 22px;
             }
         }
     }
@@ -86,7 +96,7 @@ html, body {
     }
 
     .font-color-light-grey {
-        color: #888888;
+        color: $font-color-light;
     }
 
     .classic-tee-img {
@@ -133,7 +143,7 @@ html, body {
         margin: 20px  35px;
 
         .required-star {
-            color: #c90000;
+            color: $required-color;
         }
 
         #top-size-text {
@@ -142,24 +152,34 @@ html, body {
     }
 
     .size-buttons {
-        margin: 0 35px;
+        margin: 0 30px;
 
-        .size-button {
-            width: 60px;
-            height: 50px;
-            background-color: $white;
-            border: 1px solid $border-light-grey;
-            font-size: 14px;
-            margin-right: 2px;
-            text-align: center;
+        input[type=radio] {
+            display: none;
+        }
 
-            &:focus {
-                outline: 0;
-            }
+        label {
+            color: $border-dark-grey;
+            display: inline-block;
+            cursor: pointer;
+            padding: 18px 26px;
+            margin-right: 5px;
+        }
 
-            &::selection {
-                border-color: $border-dark-grey;
-            }
+        input[type=radio] + label {
+            border: solid $button-border-width $border-light-grey;
+        }
+
+        input[type=radio]:checked + label {
+            color: $border-dark-grey;
+            border: $button-border-width-active solid $border-dark-grey;
+        }
+
+        .radio-group {
+            border: solid 1px $border-light-grey;
+            display: inline-block;
+            margin: 20px;
+            overflow: hidden;
         }
     }
 
@@ -170,7 +190,7 @@ html, body {
             width: 220px;
             height: 50px;
             background-color: $white;
-            border: 3px solid $border-dark-grey;
+            border: $button-border-width-active solid $border-dark-grey;
             font-size: 20px;
             font-weight: bold;
             text-align: center;
@@ -189,13 +209,6 @@ html, body {
     }
 }
 
-// tablet responsive
-@media #{$tablet} {
-    .click-2 {
-        display: none;
-    }
-}
-
 // desktop responsive
 @media #{$desktop} {
     body {
@@ -205,7 +218,7 @@ html, body {
     .mini-cart {
         .mini-cart-grey-part {
             .dropdown-button {
-                margin-right: 200px;
+                margin-right: 100px;
 
                 .click-1 {
                     display: none;
@@ -218,7 +231,7 @@ html, body {
         }
 
         .dropdown-items {
-            right: 200px;
+            right: 100px;
         }
     }
 
@@ -240,6 +253,19 @@ html, body {
                 width: 45px;
                 height: 40px;
             }
+
+            label {
+                padding: 5px 20px;
+            }
+
+            input[type=radio] + label {
+                border: solid $button-border-width-desktop $border-light-grey;
+            }
+
+            input[type=radio]:checked + label {
+                color: $border-dark-grey;
+                border: $button-border-width-active-desktop solid $border-dark-grey;
+            }
         }
 
         .size-title {
@@ -251,6 +277,7 @@ html, body {
                 width: 160px;
                 height: 40px;
                 font-size: 14px;
+                border: $button-border-width-active-desktop solid $border-dark-grey;
             }
         }
 
@@ -260,8 +287,8 @@ html, body {
             }
 
             h4 {
-                border-top: 1px solid $border-extra-light-grey;
-                border-bottom: 1px solid $border-extra-light-grey;
+                border-top: $heading-underline;
+                border-bottom: $heading-underline;
             }
         }
     }
